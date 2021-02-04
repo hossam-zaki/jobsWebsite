@@ -1,0 +1,22 @@
+{% extends 'base.html'%}    {%block head%}
+<title>IslamJob</title>
+{%endblock%}
+
+{%block body%}
+<h1>Welcome to IslamJob!</h1>
+
+{% if wrong_user%}
+    <p>Wrong Username</p>
+{%else%}
+    <p>Ok</p>
+{%endif%}
+
+
+<form action="/login" method='POST'>
+Username: <input type="text" name="username" id="username"> <br>
+Password: <input type="text" name = 'password' id = 'password'>
+<input class="btn btn-primary" type="submit" value="Login" />
+</form>
+<a class="btn btn-primary" href="/register">Register</a>
+
+{%endblock%}
