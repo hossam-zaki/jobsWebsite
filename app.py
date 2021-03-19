@@ -1,12 +1,12 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, redirect, render_template, request
 
 app = Flask(__name__)
-app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
-app.config['SERVER_NAME'] = 'hiredhalal.com'
+#app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
+#app.config['SERVER_NAME'] = 'hiredhalal.com'
 
 @app.route('/')
 def index():
-    return render_template('base.html')
+    return render_template('index.html')
 
 if __name__ == '__main__':
-   app.run(host=app.config["SERVER_NAME"],port=443,debug=True)
+   app.run(debug=True)
