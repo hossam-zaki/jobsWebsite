@@ -4,23 +4,6 @@ AOS.init({
   once: false,
 });
 
-var images = [
-  "../static/images/person_1.jpg",
-  "../static/images/logo.png",
-  "../static/images/slideshow1.png",
-];
-var index = -1;
-var $top = $("#top-area");
-
-setInterval(function () {
-  $top.animate({ opacity: 0 }, 500, function () {
-    $top.css("background-image", "url(" + images[++index] + ")");
-    $top.animate({ opacity: 1 }, 500, function () {
-      if (index === images.length - 1) index = -1;
-    });
-  });
-}, 6000);
-
 jQuery(document).ready(function ($) {
   "use strict";
 
